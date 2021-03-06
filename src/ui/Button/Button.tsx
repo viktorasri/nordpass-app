@@ -1,11 +1,12 @@
 import { FunctionComponent } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Button.module.scss'
 
 interface IProps {
     variant: 'button' | 'link'
     size: '1' | '2' | '3'
     color?: 'primary'
-    href?: string
+    path?: string
     handleOnClick?: () => void
     isDisabled?: boolean
 }
@@ -15,18 +16,18 @@ const Button: FunctionComponent<IProps> = ({
     variant,
     size,
     color,
-    href = '',
+    path = '',
     handleOnClick,
     isDisabled
 }) => {
     if (variant === 'link') {
         return (
-            <a
+            <Link
                 className={`${styles['Button']} ${styles[`Button--size-${size}`]} ${styles[`Button--color-${color}`]}`}
-                href={href}
+                to={path}
             >
                 {children}
-            </a>
+            </Link>
         )
     }
 

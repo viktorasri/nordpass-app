@@ -1,13 +1,24 @@
 @import '../../styles/variables.scss';
 
 .NavigationBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: fixed;
+    background-color: $navigation-bar-background-color;
     height: $navigation-bar-height;
+    width: 100%;
 }
 
 .NavigationBar__innerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: $navigation-bar-height;
+    max-width: $max-page-width;
+    padding: $navigation-bar-padding;
+    margin: 0 auto;
+}
+
+.NavigationBar__listContainer {
     display: flex;
     align-items: center;
     height: 100%;

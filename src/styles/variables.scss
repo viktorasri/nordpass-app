@@ -37,13 +37,13 @@ $color-dark-grey: #383c43;
 $color-red: #f64f64;
 
 //FONT SIZE
-$size-1: 3rem;
-$size-2: 2.5rem;
-$size-3: 1.25rem;
-$size-4: 1rem;
-$size-5: 0.875rem;
-$size-6: 0.75rem;
-$size-7: 0.625rem;
+$size-1: 3rem; //48px
+$size-2: 2.5rem; //40px
+$size-3: 1.25rem; //20px
+$size-4: 1rem; //16px
+$size-5: 0.875rem; //14px
+$size-6: 0.75rem; //12px
+$size-7: 0.625rem; //10px
 
 //TYPOGRAPHY
 $primary-font: 'Gordita';
@@ -66,8 +66,10 @@ $space-8: 3.75rem; //60px
 $space-9: 4.5rem; //72px
 $space-10: 6rem; //90px
 
-//MEDIA QUERY SIZES
-$md-screen-width: 768px;
+//SCREEN SIZES
+$max-page-width: 1134px;
+//media queries
+$md-screen-width: 768px; // when changing update width in navigationBar useEffect hook
 $lg-screen-width: 1024px;
 
 // COMPONENT VARIABLES
@@ -113,8 +115,10 @@ $button-padding-lg: $space-3 $space-6;
 
 //NAVIGATION
 //navigation bar
+$navigation-bar-padding: 0 $space-4;
 $navigation-bar-height: 3.5rem;
 $navigation-bar-item-gap: $space-6;
+$navigation-bar-background-color: $color-light;
 //navigation link
 $navigation-link-color: $color-secondary-black;
 $navigation-link-active-color: $color-green;
@@ -126,3 +130,6 @@ $navigation-icon-width: 1.5rem;
 $navigation-icon-thickness: 2px;
 $navigation-icon-color: $color-secondary-black;
 $navigation-icon-hover-color: $color-dark-grey;
+
+//HERO
+$hero-background-color: $color-light;
