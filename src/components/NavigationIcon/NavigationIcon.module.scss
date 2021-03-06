@@ -1,0 +1,60 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mediaQueries.scss';
+
+.NavigationIcon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    height: $navigation-icon-wrapper-size;
+    width: $navigation-icon-wrapper-size;
+    padding: 0;
+    margin-left: $navigation-bar-item-gap;
+    transition: all 0.2s ease;
+
+    &:hover {
+        .NavigationIcon__decoration {
+            background-color: $navigation-icon-hover-color;
+        }
+    }
+
+    @include lg {
+        display: none;
+    }
+}
+
+.NavigationIcon--active {
+    .NavigationIcon__decoration:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .NavigationIcon__decoration:nth-child(2) {
+        opacity: 0;
+    }
+
+    .NavigationIcon__decoration:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+}
+
+.NavigationIcon__decoration {
+    background-color: $navigation-icon-color;
+    display: block;
+    height: $navigation-icon-thickness;
+    left: calc((#{$navigation-icon-wrapper-size} - #{$navigation-icon-width}) / 2);
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: $navigation-icon-width;
+
+    &:nth-child(1) {
+        top: calc(50% - 6px);
+    }
+
+    &:nth-child(2) {
+        top: calc(50% - 1px);
+    }
+
+    &:nth-child(3) {
+        top: calc(50% + 4px);
+    }
+}
