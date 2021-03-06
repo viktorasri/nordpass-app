@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.Heading {
+    font-weight: $font-weight-bold;
+}
+
+.Heading--size-1 {
+    font-size: $size-1;
+    line-height: 1.33;
+}
+
+.Heading--size-2 {
+    font-size: $size-2;
+    line-height: 1.33;
+}
+
+.Heading--size-3 {
+    font-size: $size-3;
+}
+
+.Heading--size-4 {
+    font-size: $size-4;
+}
+
+.Heading--size-5 {
+    font-size: $size-5;
+}
+
+.Heading--size-6 {
+    font-size: $size-6;
+}
