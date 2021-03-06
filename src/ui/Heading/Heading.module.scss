@@ -2,16 +2,19 @@
 
 .Heading {
     font-weight: $font-weight-bold;
+    margin: 0;
 }
 
 .Heading--size-1 {
     font-size: $size-1;
     line-height: 1.33;
+    letter-spacing: -0.35px;
 }
 
 .Heading--size-2 {
     font-size: $size-2;
     line-height: 1.33;
+    letter-spacing: -0.15px;
 }
 
 .Heading--size-3 {
@@ -28,4 +31,24 @@
 
 .Heading--size-6 {
     font-size: $size-6;
+}
+
+.Heading--color-black {
+    color: $black-color;
+}
+
+.Heading--color-darkGrey {
+    color: $dark-grey-color;
+}
+
+.Heading--mb-1 {
+    margin-bottom: 36px;
+}
+
+.Heading--mb-2 {
+    margin-bottom: 60px;
+}
+
+.Heading--mb-3 {
+    margin-bottom: 72px;
 }
