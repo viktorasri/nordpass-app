@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react'
 import styles from './Icon.module.scss'
 
 interface IProps {
-    variant: string
+    variant: 'logo'
 }
 
 const Icon: FunctionComponent<IProps> = ({ variant }) => {

@@ -2,8 +2,9 @@ import { FunctionComponent } from 'react'
 import styles from './Button.module.scss'
 
 interface IProps {
-    variant?: string
-    size?: string
+    variant: 'button' | 'link'
+    size: '1' | '2' | '3'
+    color?: 'primary'
     href?: string
     handleOnClick?: () => void
     isDisabled?: boolean
@@ -11,15 +12,19 @@ interface IProps {
 
 const Button: FunctionComponent<IProps> = ({
     children,
-    variant = 'button',
+    variant,
     size,
+    color,
     href = '',
     handleOnClick,
     isDisabled
 }) => {
     if (variant === 'link') {
         return (
-            <a className={`${styles['Button']} ${styles[`Button--size-${size}`]}`} href={href}>
+            <a
+                className={`${styles['Button']} ${styles[`Button--size-${size}`]} ${styles[`Button--color-${color}`]}`}
+                href={href}
+            >
                 {children}
             </a>
         )
@@ -27,7 +32,7 @@ const Button: FunctionComponent<IProps> = ({
 
     return (
         <button
-            className={`${styles['Button']} ${styles[`Button--size-${size}`]}`}
+            className={`${styles['Button']} ${styles[`Button--size-${size}`]} ${styles[`Button--color-${color}`]}`}
             onClick={handleOnClick}
             disabled={isDisabled}
         >

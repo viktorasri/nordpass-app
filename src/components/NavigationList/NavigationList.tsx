@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './NavigationList.module.scss'
 
 const links = [
@@ -12,20 +12,25 @@ const links = [
 ]
 
 const NavigationList: FunctionComponent = () => {
+    let { pathname } = useLocation()
+
     return (
-        <>
-            <ul className={styles['NavigationList']}>
-                {links.map(({ name, path }) => {
-                    return (
-                        <li key={name} className={styles['NavigationList__listItem']}>
-                            <Link className={styles['NavigationList__link']} to={path}>
-                                {name}
-                            </Link>
-                        </li>
-                    )
-                })}
-            </ul>
-        </>
+        <ul className={styles['NavigationList']}>
+            {links.map(({ name, path }) => {
+                return (
+                    <li key={name} className={styles['NavigationList__item']}>
+                        <Link
+                            className={`${styles['NavigationList__link']} ${
+                                pathname === path && styles['NavigationList__link--active']
+                            }`}
+                            to={path}
+                        >
+                            {name}
+                        </Link>
+                    </li>
+                )
+            })}
+        </ul>
     )
 }
 

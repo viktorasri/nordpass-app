@@ -3,38 +3,44 @@
 .Button {
     background-color: transparent;
     border-style: none;
-    border-radius: 3px;
-    color: $white-color;
-    background-color: $green-color;
-    font: inherit;
-    font-weight: $font-weight-bold;
-
-    padding: 9px 20px;
+    border-radius: $button-border-radius;
+    color: inherit;
     cursor: pointer;
+    font: inherit;
+    font-weight: $button-font-weight;
+    transition: all 0.2s ease;
     // for <a>
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    transition: all 0.2s ease;
+}
+
+.Button--color-primary {
+    background-color: $primary-button-background-color;
+    color: $primary-button-text-color;
 
     &:hover,
     &:focus {
-        background-color: $light-green-color;
+        color: $primary-button-hover-text-color;
+        background-color: $primary-button-hover-background-color;
     }
 
     &:active {
-        background-color: $dark-green-color;
+        background-color: $primary-button-active-background-color;
     }
 }
 
-.Button--size-small {
-    font-size: 12px;
-    line-height: 20px;
-    padding: 6px 15px;
+.Button--size-1 {
+    font-size: $button-font-lg;
+    padding: $button-padding-lg;
 }
 
-.Button--size-large {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 12px 24px;
+.Button--size-2 {
+    font-size: $button-font-md;
+    padding: $button-padding-md;
+}
+
+.Button--size-3 {
+    font-size: $button-font-sm;
+    padding: $button-padding-sm;
 }

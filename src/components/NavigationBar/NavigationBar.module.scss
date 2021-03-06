@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.NavigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $navigation-bar-height;
+}
+
+.NavigationBar__innerWrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
