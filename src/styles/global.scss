@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $primary-font;
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    color: $dark-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Gordita';
+    src: url('../fonts/gordita-regular.woff2') format('woff2'), url('../fonts/gordita-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../fonts/gordita-medium.woff2') format('woff2'), url('../fonts/gordita-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../fonts/gordita-bold.woff2') format('woff2'), url('../fonts/gordita-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+//font size
+$size-1: 48px;
+$size-2: 40px;
+$size-3: 20px;
+$size-4: 16px;
+$size-5: 14px;
+$size-6: 12px;
+$size-7: 10px;
+
+//typography
+$primary-font: 'Gordita';
+$default-font-size: $size-4;
+$default-line-height: 1.5;
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
+
+// colors
+$black-color: #000000;
+$lighter-black-color: #151922;
+$dark-color: #373b42;
+$lighter-dark-color: #383c43;
+$green-color: #43a5a1;
+$light-color: #edf8f7;
+$lightest-color: #f8f8f8;
+$grey-color: #b9babd;
+$dark-grey-color: #383c43;
+$red-color: #f64f64;
