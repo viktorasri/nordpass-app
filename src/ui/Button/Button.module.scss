@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+.Button {
+    background-color: transparent;
+    border-style: none;
+    border-radius: 3px;
+    color: $white-color;
+    background-color: $green-color;
+    font: inherit;
+    font-weight: $font-weight-bold;
+
+    padding: 9px 20px;
+    cursor: pointer;
+    // for <a>
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus {
+        background-color: $light-green-color;
+    }
+
+    &:active {
+        background-color: $dark-green-color;
+    }
+}
+
+.Button--size-small {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 6px 15px;
+}
+
+.Button--size-large {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 12px 24px;
+}
