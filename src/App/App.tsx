@@ -13,38 +13,40 @@ import styles from './App.module.scss'
 function App() {
     return (
         <Router>
-            <header>
-                <NavigationBar />
-            </header>
-            <main className={styles['Content']}>
-                <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                    <Route path="/features">
-                        <Features />
-                    </Route>
-                    <Route path="/pricing">
-                        <Pricing />
-                    </Route>
-                    <Route path="/apps">
-                        <Apps />
-                    </Route>
-                    <Route path="/blog">
-                        <Blog />
-                    </Route>
-                    <Route path="/help">
-                        <Help />
-                    </Route>
-                    <Route path="/my-account">
-                        <MyAccount />
-                    </Route>
-                    <Route path="/vault">
-                        <Vault />
-                    </Route>
-                </Switch>
-            </main>
-            <footer></footer>
+            <div className={styles['App']}>
+                <header>
+                    <NavigationBar />
+                </header>
+                <main className={styles['App__content']}>
+                    <Switch>
+                        <Route exact path="/">
+                            <Home />
+                        </Route>
+                        <Route path="/features">
+                            <Features />
+                        </Route>
+                        <Route path="/pricing">
+                            <Pricing />
+                        </Route>
+                        <Route path="/apps">
+                            <Apps />
+                        </Route>
+                        <Route path="/blog">
+                            <Blog />
+                        </Route>
+                        <Route path="/help">
+                            <Help />
+                        </Route>
+                        <Route path="/my-account">
+                            <MyAccount />
+                        </Route>
+                        <Route path="/vault">
+                            <Vault />
+                        </Route>
+                    </Switch>
+                </main>
+                <footer></footer>
+            </div>
         </Router>
     )
 }
