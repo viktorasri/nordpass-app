@@ -56,6 +56,7 @@ $font-weight-semibold: 500;
 $font-weight-bold: 700;
 
 //SPACING
+$space-0: 0;
 $space-1: 0.375rem; //6px
 $space-2: 0.625rem; //10px
 $space-3: 0.75rem; //12px
@@ -71,6 +72,7 @@ $space-10: 6rem; //90px
 $default-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.15);
 $default-border-radius: 3px;
 $default-border: 1px solid $color-light-grey;
+$grey-border: 1px solid $color-grey;
 
 //SCREEN SIZES
 $max-page-width: 1200px;
@@ -79,7 +81,6 @@ $md-screen-width: 768px; // when changing update width in navigationBar useEffec
 $lg-screen-width: 1024px;
 
 // COMPONENT VARIABLES
-
 //HEADING
 $heading-size-1: $size-1;
 $heading-size-2: $size-2;
@@ -91,9 +92,6 @@ $heading-font-weight: $font-weight-bold;
 $heading-line-height: 1.33;
 $heading-letter-spacing-sm: -0.35px;
 $heading-letter-spacing-md: -0.15px;
-//colors
-$heading-dark-color: $color-dark-grey;
-$heading-black-color: $color-black;
 
 //BUTTON
 $button-font-weight: $font-weight-bold;
@@ -124,10 +122,6 @@ $navigation-link-active-color: $color-green;
 $navigation-icon-wrapper-size: 1.875rem;
 $navigation-icon-width: 1.5rem;
 $navigation-icon-thickness: 2px;
-$navigation-icon-color: $color-secondary-black;
-$navigation-icon-hover-color: $color-dark-grey;
 
-//COLLAPSIBLE
-$collapsible-box-shadow: $default-box-shadow;
-$collapsible-border-radius: $default-border-radius;
-$collapsible-background-color: $color-white;
+//CONTACT FORM
+$contact-form-width: 650px;

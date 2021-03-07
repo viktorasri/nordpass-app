@@ -1,9 +1,9 @@
 @import '../../styles/variables.scss';
 
 .Collapsible {
-    box-shadow: $collapsible-box-shadow;
-    border-radius: $collapsible-border-radius;
-    background-color: $collapsible-background-color;
+    box-shadow: $default-box-shadow;
+    border-radius: $default-border-radius;
+    background-color: $color-white;
 }
 
 .Collapsible__title {

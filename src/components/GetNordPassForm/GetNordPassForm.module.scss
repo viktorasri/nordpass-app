@@ -1,15 +1,17 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mediaQueries.scss';
 
-.Hero {
+.GetNordPassForm {
     max-width: $max-page-width;
+}
 
+.GetNordPassForm__innerWrapper {
     @include lg {
         display: flex;
     }
 }
 
-.Hero__image {
+.GetNordPassForm__image {
     width: 100%;
     height: auto;
 }

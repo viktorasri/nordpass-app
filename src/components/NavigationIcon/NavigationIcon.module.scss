@@ -12,7 +12,7 @@
 
     &:hover {
         .NavigationIcon__decoration {
-            background-color: $navigation-icon-hover-color;
+            background-color: $color-dark-grey;
         }
     }
 
@@ -36,7 +36,7 @@
 }
 
 .NavigationIcon__decoration {
-    background-color: $navigation-icon-color;
+    background-color: $color-secondary-black;
     display: block;
     height: $navigation-icon-thickness;
     left: calc((#{$navigation-icon-wrapper-size} - #{$navigation-icon-width}) / 2);

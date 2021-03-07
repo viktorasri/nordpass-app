@@ -8,6 +8,7 @@ import Blog from '../pages/Blog/Blog'
 import Help from '../pages/Help/Help'
 import MyAccount from '../pages/MyAccount/MyAccount'
 import Vault from '../pages/Vault/Vault'
+import Footer from '../components/Footer/Footer'
 import styles from './App.module.scss'
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
                         </Route>
                     </Switch>
                 </main>
-                <footer></footer>
+                <Footer />
             </div>
         </Router>
     )

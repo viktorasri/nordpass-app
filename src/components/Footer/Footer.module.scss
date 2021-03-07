@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mediaQueries.scss';
+
+.Footer {
+    max-width: $max-page-width;
+}
+
+.Footer__innerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.Footer__title {
+    text-transform: uppercase;
+    color: $color-grey;
+}
+
+.Footer__link {
+    display: block;
+    color: $color-dark-grey;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: $color-grey;
+    }
+}
+
+.Footer__copyright {
+    line-height: 1.8;
+}
