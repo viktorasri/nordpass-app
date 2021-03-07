@@ -43,7 +43,7 @@ const ContactForm = () => {
                 <input
                     className={`${styles['ContactForm__input']} ${
                         errors.name && styles['ContactForm__input--error']
-                    } pt-3 pb-2 pl-4 size-5`}
+                    } color-dark-grey pt-3 pb-2 pl-4 size-5`}
                     placeholder="Name"
                     name="name"
                     onChange={handleOnChange}
@@ -59,7 +59,7 @@ const ContactForm = () => {
                 <input
                     className={`${styles['ContactForm__input']} ${
                         errors.email && styles['ContactForm__input--error']
-                    } pt-3 pb-2 pl-4 size-5`}
+                    } color-dark-grey pt-3 pb-2 pl-4 size-5`}
                     placeholder="Email"
                     name="email"
                     onChange={handleOnChange}
@@ -75,7 +75,7 @@ const ContactForm = () => {
             </div>
             <div className="mb-6">
                 <textarea
-                    className={`${styles['ContactForm__textarea']} pt-3 pb-2 pl-4 mb-4 size-5`}
+                    className={`${styles['ContactForm__textarea']} color-dark-grey pt-3 pb-2 pl-4 mb-4 size-5`}
                     placeholder="Note"
                     rows={7}
                     onChange={handleOnChange}

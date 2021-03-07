@@ -57,7 +57,7 @@ const LeakedPasswords = () => {
                 </Heading>
 
                 <select
-                    className={`${styles['LeakedPasswords__select']} ml-3 py-1 pl-2`}
+                    className={`${styles['LeakedPasswords__select']} color-dark-grey ml-3 py-1 pl-2`}
                     onChange={(e) => setSortOption(e.target.value)}
                 >
                     <option value="count">Count</option>

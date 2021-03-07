@@ -5,7 +5,7 @@ const Footer = () => (
     <footer className={`${styles['Footer']} mx-auto`}>
         <div className={`${styles[`Footer__innerWrapper`]} px-4 my-8 lg-my-9`}>
             <div className="size-6 textWeight-semibold">
-                <div className={`${styles['Footer__title']} mb-4`}>Engage</div>
+                <div className={`${styles['Footer__title']} color-grey mb-4`}>Engage</div>
                 <Link to="/" className={`${styles['Footer__link']} mb-3`}>
                     Privacy Pilicy
                 </Link>
