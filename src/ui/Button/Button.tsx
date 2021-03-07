@@ -4,7 +4,7 @@ import styles from './Button.module.scss'
 
 interface IProps {
     variant: 'button' | 'link'
-    size: '1' | '2' | '3'
+    size?: '1' | '2' | '3'
     color?: 'primary'
     path?: string
     handleOnClick?: () => void

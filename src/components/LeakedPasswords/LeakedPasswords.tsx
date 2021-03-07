@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import LeakedList from '../LeakedList/LeakedList'
+import LeakedPasswordList from '../LeakedPasswordList/LeakedPasswordList'
 import Heading from '../../ui/Heading/Heading'
 import Button from '../../ui/Button/Button'
 import styles from './LeakedPasswords.module.scss'
@@ -10,7 +10,7 @@ const LeakedPasswords = () => {
     const [sortOption, setSortOption] = useState('count')
     const [sortedList, setSortedList] = useState<{ value: string; count: string }[]>([])
     const [showAllList, setShowAllList] = useState(false)
-    const [listLength, setListLength] = useState(20)
+    const [listLength, setListLength] = useState(10)
 
     useEffect(() => {
         const getPasswordData = async () => {
@@ -40,17 +40,19 @@ const LeakedPasswords = () => {
         }
         if (showAllList) {
             setShowAllList(false)
-            setListLength(20)
+            setListLength(10)
         }
     }
 
     return (
-        <section className={styles['LeakedPasswords']}>
-            <Heading variant="h3" size="2" mb="2">
-                Top leaked passwords
-            </Heading>
-            <div className={styles['LeakedPasswords__listTitle']}>
-                <Heading variant="h6" size="6">
+        <section className={`${styles['LeakedPasswords']} text-centered mx-auto p-4 lg-pb-8`}>
+            <div className="mb-8">
+                <Heading variant="h3" size="2">
+                    Top leaked passwords
+                </Heading>
+            </div>
+            <div className={`${styles['LeakedPasswords__listTitle']} pb-6`}>
+                <Heading variant="h6" size="3">
                     Passwords
                 </Heading>
 
@@ -59,10 +61,10 @@ const LeakedPasswords = () => {
                     <option value="abc">ABC</option>
                 </select>
             </div>
-            <LeakedList sortedList={sortedList} listLength={listLength} />
-            <div className={styles['LeakedPasswords__buttonWrapper']}>
+            <LeakedPasswordList sortedList={sortedList} listLength={listLength} />
+            <div className="mt-7 lg-pb-7">
                 <Button variant="button" size="2" color="primary" handleOnClick={toggleListLength}>
-                    {!showAllList ? `Show all (50)` : `Show less (20)`}
+                    {!showAllList ? `Show all (50)` : `Show less (10)`}
                 </Button>
             </div>
         </section>

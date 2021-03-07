@@ -70,6 +70,7 @@ $space-10: 6rem; //90px
 //BORDERS & SHADOWS
 $default-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.15);
 $default-border-radius: 3px;
+$default-border: 1px solid $color-light-grey;
 
 //SCREEN SIZES
 $max-page-width: 1200px;
@@ -80,7 +81,6 @@ $lg-screen-width: 1024px;
 // COMPONENT VARIABLES
 
 //HEADING
-//typography
 $heading-size-1: $size-1;
 $heading-size-2: $size-2;
 $heading-size-3: $size-3;
@@ -91,10 +91,6 @@ $heading-font-weight: $font-weight-bold;
 $heading-line-height: 1.33;
 $heading-letter-spacing-sm: -0.35px;
 $heading-letter-spacing-md: -0.15px;
-//margins
-$heading-margin-sm: $space-7;
-$heading-margin-md: $space-8;
-$heading-margin-lg: $space-9;
 //colors
 $heading-dark-color: $color-dark-grey;
 $heading-black-color: $color-black;
@@ -120,15 +116,10 @@ $button-padding-lg: $space-3 $space-6;
 
 //NAVIGATION
 //navigation bar
-$navigation-bar-padding: 0 $space-4;
 $navigation-bar-height: 3.5rem;
-$navigation-bar-item-gap: $space-6;
-$navigation-bar-background-color: $color-light;
 //navigation link
 $navigation-link-color: $color-secondary-black;
 $navigation-link-active-color: $color-green;
-$navigation-link-font-size: $size-5;
-$navigation-link-font-weight: $font-weight-semibold;
 //navigation icon
 $navigation-icon-wrapper-size: 1.875rem;
 $navigation-icon-width: 1.5rem;
@@ -136,5 +127,7 @@ $navigation-icon-thickness: 2px;
 $navigation-icon-color: $color-secondary-black;
 $navigation-icon-hover-color: $color-dark-grey;
 
-//HERO
-$hero-background-color: $color-light;
+//COLLAPSIBLE
+$collapsible-box-shadow: $default-box-shadow;
+$collapsible-border-radius: $default-border-radius;
+$collapsible-background-color: $color-white;

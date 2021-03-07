@@ -4,24 +4,16 @@
 .NavigationList {
     display: none;
     list-style: none;
-    padding: 0;
-    margin: 0;
 
     @include md {
         display: inline-flex;
     }
 }
 
-.NavigationList__item {
-    margin-right: $navigation-bar-item-gap;
-}
-
 .NavigationList__link {
     color: $navigation-link-color;
-    font-size: $navigation-link-font-size;
     text-decoration: none;
     text-transform: capitalize;
-    font-weight: $navigation-link-font-weight;
     transition: all 0.2s ease;
 
     &:hover {

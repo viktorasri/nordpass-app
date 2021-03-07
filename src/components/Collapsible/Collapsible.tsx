@@ -40,11 +40,11 @@ const Collapsible: FunctionComponent<IProps> = ({ children, title, expanded = fa
     }
 
     return (
-        <div className={`${styles['Collapsible']} ${isExpanded && styles['Collapsible--expanded']}`}>
-            <div className={styles['Collapsible__innerWrapper']}>
-                <div className={styles['Collapsible__title']} onClick={toggleIsExpanded}>
-                    <h4 className={styles['Collapsible__titleText']}>{title}</h4>
-                    <Button size="3" variant="button" handleOnClick={toggleIsExpanded}>
+        <div className={`${styles['Collapsible']} ${isExpanded && styles['Collapsible--expanded']} mb-3`}>
+            <div className="pt-4 pr-5 pl-4">
+                <div className={`${styles['Collapsible__title']} mb-4`} onClick={toggleIsExpanded}>
+                    <h4 className="texWeight-bold">{title}</h4>
+                    <Button variant="button" handleOnClick={toggleIsExpanded}>
                         <Icon variant={isExpanded ? 'arrowUp' : 'arrowDown'} />
                     </Button>
                 </div>

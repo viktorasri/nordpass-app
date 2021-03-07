@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mediaQueries.scss';
 
 *,
 *:after,
@@ -16,4 +17,240 @@ body {
     color: $default-text-color;
     height: 100%;
     overflow-x: hidden;
+}
+
+//UTILITIES
+
+//spacing
+$spacing-shortcuts: (
+    'margin': 'm',
+    'padding': 'p'
+);
+$spacing-directions: (
+    'top': 't',
+    'right': 'r',
+    'bottom': 'b',
+    'left': 'l'
+);
+
+$spacing-values: (
+    '1': $space-1,
+    '2': $space-2,
+    '3': $space-3,
+    '4': $space-4,
+    '5': $space-5,
+    '6': $space-6,
+    '7': $space-7,
+    '8': $space-8,
+    '9': $space-9,
+    '10': $space-10
+);
+
+@each $property, $shortcut in $spacing-shortcuts {
+    @each $name, $value in $spacing-values {
+        // All directions
+        .#{$shortcut}-#{$name} {
+            #{$property}: $value;
+        }
+
+        // Relative directions
+        @each $direction, $direction-shortcut in $spacing-directions {
+            .#{$shortcut}#{$direction-shortcut}-#{$name} {
+                #{$property}-#{$direction}: $value;
+            }
+        }
+
+        // Horizontal axis
+        .#{$shortcut}x-#{$name} {
+            #{$property}-left: $value;
+            #{$property}-right: $value;
+        }
+
+        // Vertical axis
+        .#{$shortcut}y-#{$name} {
+            #{$property}-top: $value;
+            #{$property}-bottom: $value;
+        }
+    }
+}
+
+@each $property, $shortcut in $spacing-shortcuts {
+    @each $name, $value in $spacing-values {
+        @include md {
+            // All directions
+            .md-#{$shortcut}-#{$name} {
+                #{$property}: $value;
+            }
+
+            // Relative directions
+            @each $direction, $direction-shortcut in $spacing-directions {
+                .md-#{$shortcut}#{$direction-shortcut}-#{$name} {
+                    #{$property}-#{$direction}: $value;
+                }
+            }
+
+            // Horizontal axis
+            .md-#{$shortcut}x-#{$name} {
+                #{$property}-left: $value;
+                #{$property}-right: $value;
+            }
+
+            // Vertical axis
+            .md-#{$shortcut}y-#{$name} {
+                #{$property}-top: $value;
+                #{$property}-bottom: $value;
+            }
+        }
+    }
+}
+
+@each $property, $shortcut in $spacing-shortcuts {
+    @each $name, $value in $spacing-values {
+        @include lg {
+            // All directions
+            .lg-#{$shortcut}-#{$name} {
+                #{$property}: $value;
+            }
+
+            // Relative directions
+            @each $direction, $direction-shortcut in $spacing-directions {
+                .lg-#{$shortcut}#{$direction-shortcut}-#{$name} {
+                    #{$property}-#{$direction}: $value;
+                }
+            }
+
+            // Horizontal axis
+            .lg-#{$shortcut}x-#{$name} {
+                #{$property}-left: $value;
+                #{$property}-right: $value;
+            }
+
+            // Vertical axis
+            .lg-#{$shortcut}y-#{$name} {
+                #{$property}-top: $value;
+                #{$property}-bottom: $value;
+            }
+        }
+    }
+}
+
+// Margin auto
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.md-mx-auto {
+    @include md {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.lg-mx-auto {
+    @include lg {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//text sizes
+$sizes: (
+    '1': $size-1,
+    '2': $size-2,
+    '3': $size-3,
+    '4': $size-4,
+    '5': $size-5,
+    '6': $size-6,
+    '7': $size-7
+);
+
+@each $size, $value in $sizes {
+    .size-#{$size} {
+        font-size: $value;
+    }
+}
+
+@each $size, $value in $sizes {
+    .md-size-#{$size} {
+        @include md {
+            font-size: $value;
+        }
+    }
+}
+
+@each $size, $value in $sizes {
+    .lg-size-#{$size} {
+        @include lg {
+            font-size: $value;
+        }
+    }
+}
+
+//text alignment
+$alignments: (
+    'centered': 'center',
+    'justified': 'justify',
+    'left': 'left',
+    'right': 'right'
+);
+
+@each $alignment, $text-align in $alignments {
+    .text-#{$alignment} {
+        text-align: #{$text-align};
+    }
+}
+
+@each $alignment, $text-align in $alignments {
+    .md-text-#{$alignment} {
+        @include md {
+            text-align: #{$text-align};
+        }
+    }
+}
+
+@each $alignment, $text-align in $alignments {
+    .lg-text-#{$alignment} {
+        @include lg {
+            text-align: #{$text-align};
+        }
+    }
+}
+
+//text weight
+.textWeight-normal {
+    font-weight: $font-weight-normal;
+}
+
+.textWeight-semibold {
+    font-weight: $font-weight-semibold;
+}
+
+.textWeight-bold {
+    font-weight: $font-weight-bold;
+}
+
+//colors
+$colors: (
+    'white': $color-white,
+    'black': $color-black,
+    'secondaryBlack': $color-secondary-black,
+    'dark': $color-dark,
+    'green': $color-green,
+    'light': $color-light,
+    'lightest': $color-lightest,
+    'grey': $color-grey,
+    'lightGrey': $color-light-grey,
+    'darkGrey': $color-dark-grey,
+    'red': $color-red
+);
+
+@each $color, $value in $colors {
+    .color-#{$color} {
+        color: $value;
+    }
+
+    .bg-color-#{$color} {
+        background-color: $value;
+    }
 }

@@ -2,25 +2,10 @@
 @import '../../styles/mediaQueries.scss';
 
 .Hero {
-    background-color: $hero-background-color;
-    padding: $space-4;
-}
+    max-width: $max-page-width;
 
-.Hero__innerWrapper {
     @include lg {
         display: flex;
-        padding: calc(#{$space-7} + #{$space-8}) $space-4;
-        max-width: $max-page-width;
-        margin: 0 auto;
-    }
-}
-
-.Hero__info {
-    margin-bottom: $space-7;
-    text-align: center;
-
-    @include lg {
-        text-align: left;
     }
 }
 
@@ -29,6 +14,6 @@
     height: auto;
 
     @include lg {
-        width: 110%;
+        width: 115%;
     }
 }
