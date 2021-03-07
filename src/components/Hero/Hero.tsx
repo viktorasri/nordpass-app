@@ -6,7 +6,7 @@ const Hero = () => (
     <section className={styles['Hero']}>
         <div className={styles['Hero__innerWrapper']}>
             <div className={styles['Hero__info']}>
-                <Heading variant="h1" size="1" color="black" mb="1">
+                <Heading variant="h2" size="1" color="black" mb="1">
                     Get your passwords organized
                 </Heading>
                 <div className={styles['Hero__buttonWrapper']}>
