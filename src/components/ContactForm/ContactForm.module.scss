@@ -20,6 +20,10 @@
     }
 }
 
+.ContactForm__input--error {
+    border-color: $color-red;
+}
+
 .ContactForm__textarea {
     resize: none;
 }
@@ -31,4 +35,9 @@
     &:hover {
         color: $color-dark-grey;
     }
+}
+
+.ContactForm__errorText {
+    display: inline-block;
+    vertical-align: middle;
 }
