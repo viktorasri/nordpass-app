@@ -9,7 +9,9 @@ interface IProps {
 const NavigationIcon: FunctionComponent<IProps> = ({ showNavigationMenu, toggleShowNavigation }) => {
     return (
         <button
-            className={`${styles['NavigationIcon']} ${showNavigationMenu && styles['NavigationIcon--active']} ml-6`}
+            className={`${styles['NavigationIcon']} ${
+                showNavigationMenu && styles['NavigationIcon--active']
+            } ml-3 md-ml-6`}
             onClick={toggleShowNavigation}
         >
             <span className={styles['NavigationIcon__decoration']}></span>

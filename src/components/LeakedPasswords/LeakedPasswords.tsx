@@ -56,7 +56,10 @@ const LeakedPasswords = () => {
                     Passwords
                 </Heading>
 
-                <select onChange={(e) => setSortOption(e.target.value)}>
+                <select
+                    className={`${styles['LeakedPasswords__select']} ml-3 py-1 pl-2`}
+                    onChange={(e) => setSortOption(e.target.value)}
+                >
                     <option value="count">Count</option>
                     <option value="abc">ABC</option>
                 </select>
