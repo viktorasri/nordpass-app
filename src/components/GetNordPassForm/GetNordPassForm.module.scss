@@ -8,10 +8,19 @@
 .GetNordPassForm__innerWrapper {
     @include lg {
         display: flex;
+        align-items: center;
     }
+}
+
+.GetNordPassForm__imageWrapper {
+    direction: rtl;
 }
 
 .GetNordPassForm__image {
     width: 100%;
     height: auto;
+
+    @include lg {
+        width: 140%;
+    }
 }
