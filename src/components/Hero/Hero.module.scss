@@ -10,7 +10,7 @@
     @include lg {
         display: flex;
         padding: calc(#{$space-7} + #{$space-8}) $space-4;
-        max-width: 1134px;
+        max-width: $max-page-width;
         margin: 0 auto;
     }
 }

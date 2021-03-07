@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mediaQueries.scss';
+
+.Collapsible {
+    margin-bottom: $space-3;
+    box-shadow: $default-box-shadow;
+    border-radius: $default-border-radius;
+    background-color: $color-white;
+}
+
+.Collapsible__innerWrapper {
+    padding: $space-4 $space-5 0 $space-4;
+}
+
+.Collapsible__title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $space-4;
+}
+
+.Collapsible__titleText {
+    font-weight: $font-weight-bold;
+}
+
+.Collapsible__content {
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+}
+
+.Collapsible__button {
+    border: none;
+    cursor: pointer;
+    color: $color-dark-grey;
+    background-color: $color-white;
+    height: 20px;
+    position: relative;
+    transition: all 0.2s ease;
+    width: 20px;
+}
+
+.Collapsible--expanded {
+    .Collapsible-button::before {
+        transform: rotate(90deg);
+    }
+}
+
+.Collapsible--expanded {
+    .Collapsible-button::after {
+        transform: rotate(180deg);
+    }
+}

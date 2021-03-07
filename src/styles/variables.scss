@@ -67,8 +67,12 @@ $space-8: 3.75rem; //60px
 $space-9: 4.5rem; //72px
 $space-10: 6rem; //90px
 
+//BORDERS & SHADOWS
+$default-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.15);
+$default-border-radius: 3px;
+
 //SCREEN SIZES
-$max-page-width: 1134px;
+$max-page-width: 1200px;
 //media queries
 $md-screen-width: 768px; // when changing update width in navigationBar useEffect hook
 $lg-screen-width: 1024px;
@@ -97,7 +101,7 @@ $heading-black-color: $color-black;
 
 //BUTTON
 $button-font-weight: $font-weight-bold;
-$button-border-radius: 3px;
+$button-border-radius: $default-border-radius;
 //primary button
 $primary-button-text-color: $color-white;
 $primary-button-background-color: $color-green;

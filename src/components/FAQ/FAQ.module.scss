@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mediaQueries.scss';
+
+.FAQ {
+    background: $color-lightest;
+    text-align: center;
+}
+
+.FAQ__innerWrapper {
+    padding: $space-8 $space-4;
+    max-width: $md-screen-width;
+    margin: 0 auto;
+
+    @include lg {
+        padding-top: calc(#{$space-7} + #{$space-8});
+        padding-bottom: calc(#{$space-7} + #{$space-8});
+    }
+}
+
+.FAQ__text {
+    text-align: left;
+    padding-bottom: $space-4;
+
+    &:last-child {
+        padding-bottom: $space-6;
+    }
+}

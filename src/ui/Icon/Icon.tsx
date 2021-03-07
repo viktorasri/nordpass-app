@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react'
 import styles from './Icon.module.scss'
 
 interface IProps {
-    variant: 'logo'
+    variant: 'logo' | 'arrowDown' | 'arrowUp'
 }
 
 const Icon: FunctionComponent<IProps> = ({ variant }) => {
@@ -12,6 +12,14 @@ const Icon: FunctionComponent<IProps> = ({ variant }) => {
         case 'logo':
             src = '/images/nordpass-logo.svg'
             alt = 'NordPass logo'
+            break
+        case 'arrowDown':
+            src = '/images/arrow-down.svg'
+            alt = 'Arrow down'
+            break
+        case 'arrowUp':
+            src = '/images/arrow-up.svg'
+            alt = 'Arrow up'
             break
     }
     return <img className={styles['Icon']} src={src} alt={alt}></img>
