@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react'
 import { Link } from 'react-router-dom'
-import pages from '../../data/pages'
+import pages from '../../../data/pages'
 import styles from './NavigationList.module.scss'
 
 interface IProps {
@@ -16,7 +16,7 @@ const NavigationList: FunctionComponent<IProps> = ({ pathname }) => {
                         <Link
                             className={`${styles['NavigationList__link']} ${
                                 pathname === path && styles['NavigationList__link--active']
-                            } size--5 textWeight--semibold`}
+                            } texSize--5 textWeight--semibold`}
                             to={path}
                         >
                             {name}

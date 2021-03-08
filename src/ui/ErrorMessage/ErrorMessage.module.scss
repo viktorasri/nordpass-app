@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.ErrorMessage {
+    color: $color-red;
+    font-weight: $font-weight-semibold;
+    font-size: $size-6;
+}
+
+.ErrorMessage__text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: $space-1;
+}

@@ -1,6 +1,6 @@
 import { Dispatch, FunctionComponent, SetStateAction } from 'react'
 import { Link } from 'react-router-dom'
-import pages from '../../data/pages'
+import pages from '../../../data/pages'
 import styles from './NavigationMenu.module.scss'
 
 interface IProps {

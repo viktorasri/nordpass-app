@@ -9,13 +9,13 @@ $sizes: (
 );
 
 @each $size, $value in $sizes {
-    .size--#{$size} {
+    .textSize--#{$size} {
         font-size: $value;
     }
 }
 
 @each $size, $value in $sizes {
-    .md__size--#{$size} {
+    .md__textSize--#{$size} {
         @include md {
             font-size: $value;
         }
@@ -23,7 +23,7 @@ $sizes: (
 }
 
 @each $size, $value in $sizes {
-    .lg__size--#{$size} {
+    .lg__textSize--#{$size} {
         @include lg {
             font-size: $value;
         }

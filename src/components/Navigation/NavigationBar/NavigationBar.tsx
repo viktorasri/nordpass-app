@@ -3,8 +3,8 @@ import { Link, useLocation } from 'react-router-dom'
 import NavigationList from '../NavigationList/NavigationList'
 import NavigationIcon from '../NavigationIcon/NavigationIcon'
 import NavigationMenu from '../NavigationMenu/NavigationMenu'
-import Button from '../../ui/Button/Button'
-import Icon from '../../ui/Icon/Icon'
+import Button from '../../../ui/Button/Button'
+import Icon from '../../../ui/Icon/Icon'
 import styles from './NavigationBar.module.scss'
 
 const NavigationBar: FunctionComponent = () => {

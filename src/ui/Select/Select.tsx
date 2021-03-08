@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const Select: FunctionComponent<IProps> = ({ children, handleOnChange }) => (
-    <select className={`${styles['Select']} color--dark-grey ml--3 pl--2`} onChange={handleOnChange}>
+    <select className={styles['Select']} onChange={handleOnChange}>
         {children}
     </select>
 )

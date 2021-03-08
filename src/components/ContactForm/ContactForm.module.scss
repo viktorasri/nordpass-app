@@ -6,27 +6,6 @@
     max-width: $contact-form-width;
 }
 
-.ContactForm__input,
-.ContactForm__textarea {
-    width: 100%;
-    border: $grey-border;
-    border-radius: $default-border-radius;
-    font-family: $primary-font;
-    font-weight: $font-weight-semibold;
-
-    &::placeholder {
-        font-weight: $font-weight-normal;
-    }
-}
-
-.ContactForm__input--error {
-    border-color: $color-red;
-}
-
-.ContactForm__textarea {
-    resize: none;
-}
-
 .ContactForm__link {
     color: $color-secondary-black;
     transition: all 0.2s ease;
@@ -34,9 +13,4 @@
     &:hover {
         color: $color-dark-grey;
     }
-}
-
-.ContactForm__errorText {
-    display: inline-block;
-    vertical-align: middle;
 }

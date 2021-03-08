@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import NavigationBar from '../components/NavigationBar/NavigationBar'
+import NavigationBar from '../components/Navigation/NavigationBar/NavigationBar'
 import Home from '../pages/Home/Home'
 import Features from '../pages/Features/Features'
 import Pricing from '../pages/Pricing/Pricing'
