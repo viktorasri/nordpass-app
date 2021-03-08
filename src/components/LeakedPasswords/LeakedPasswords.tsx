@@ -5,9 +5,10 @@ import Button from '../../ui/Button/Button'
 import Select from '../../ui/Select/Select'
 import styles from './LeakedPasswords.module.scss'
 import { getSortedPasswordListByCount, getSortedPasswordListByName } from '../../helpers'
+import leakedPasswordData from '../../data/leakedPasswordData'
 
 const LeakedPasswords = () => {
-    const [leakedPasswordList, setLeakedPasswordList] = useState([])
+    const [leakedPasswordList, setLeakedPasswordList] = useState([] as { value: string; count: string }[])
     const [sortOption, setSortOption] = useState('count')
     const [sortedList, setSortedList] = useState<{ value: string; count: string }[]>([])
     const [showAllList, setShowAllList] = useState(false)
@@ -15,9 +16,13 @@ const LeakedPasswords = () => {
 
     useEffect(() => {
         const getPasswordData = async () => {
-            const response = await fetch('/v2/worst-psw.json')
-            const data = await response.json()
-            setLeakedPasswordList(data.passwords)
+            try {
+                const response = await fetch('/v2/worst-psw.json')
+                const data = await response.json()
+                setLeakedPasswordList(data.passwords)
+            } catch (e) {
+                setLeakedPasswordList(leakedPasswordData)
+            }
         }
         getPasswordData()
     }, [])
