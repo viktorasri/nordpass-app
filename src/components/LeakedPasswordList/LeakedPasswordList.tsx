@@ -1,30 +1,14 @@
-import { useState, useEffect, ChangeEventHandler } from 'react'
+import { useState, ChangeEventHandler } from 'react'
 import Heading from '../../ui/Heading/Heading'
 import Button from '../../ui/Button/Button'
 import Select from '../../ui/Select/Select'
 import styles from './LeakedPasswordList.module.scss'
 import usePasswordList from '../../data/hooks/usePasswordList'
-import { getSortedPasswordListByCount, getSortedPasswordListByName } from '../../utils'
-import { LeakedPassword } from '../../types'
 
 const LeakedPasswordList = () => {
-    const leakedPasswordList = usePasswordList()
-    const [sortOption, setSortOption] = useState('count')
-    const [sortedList, setSortedList] = useState<LeakedPassword[]>([])
+    const { sortedList, setSortOption } = usePasswordList('count')
     const [showAllList, setShowAllList] = useState(false)
     const [listLength, setListLength] = useState(10)
-
-    useEffect(() => {
-        if (leakedPasswordList.length > 0) {
-            if (sortOption === 'count') {
-                setSortedList(getSortedPasswordListByCount(leakedPasswordList))
-            }
-
-            if (sortOption === 'abc') {
-                setSortedList(getSortedPasswordListByName(leakedPasswordList))
-            }
-        }
-    }, [leakedPasswordList, sortOption])
 
     const toggleListLength = () => {
         if (!showAllList) {

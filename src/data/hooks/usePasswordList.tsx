@@ -1,9 +1,16 @@
 import { useEffect, useState } from 'react'
 import leakedPasswordData from '../../data/leakedPasswordData'
-import { LeakedPassword } from '../../types'
 
-const usePasswordList = () => {
+type LeakedPassword = {
+    value: string
+    count: string
+}
+
+const usePasswordList = (initialSortOption: string) => {
     const [passwordList, setPasswordList] = useState([] as LeakedPassword[])
+    const [sortedList, setSortedList] = useState([] as LeakedPassword[])
+    const [sortOption, setSortOption] = useState(initialSortOption)
+
     useEffect(() => {
         const getPasswordData = async () => {
             try {
@@ -17,7 +24,37 @@ const usePasswordList = () => {
         getPasswordData()
     }, [])
 
-    return passwordList
+    useEffect(() => {
+        if (passwordList.length > 0) {
+            if (sortOption === 'count') {
+                setSortedList(getSortedPasswordListByCount(passwordList))
+            }
+
+            if (sortOption === 'abc') {
+                setSortedList(getSortedPasswordListByName(passwordList))
+            }
+        }
+    }, [passwordList, sortOption])
+
+    return { sortedList, setSortOption }
 }
 
 export default usePasswordList
+
+const getSortedPasswordListByCount = (list: LeakedPassword[]) => {
+    const sortedList = [...list].sort((a, b) => parseInt(b.count) - parseInt(a.count))
+    return sortedList
+}
+
+const getSortedPasswordListByName = (list: LeakedPassword[]) => {
+    const sortedList = [...list].sort((a, b) => {
+        if (a.value < b.value) {
+            return -1
+        }
+        if (a.value > b.value) {
+            return 1
+        }
+        return 0
+    })
+    return sortedList
+}

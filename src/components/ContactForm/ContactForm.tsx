@@ -5,7 +5,6 @@ import TextArea from '../../ui/TextArea/TextArea'
 import ErrorMessage from '../../ui/ErrorMessage/ErrorMessage'
 import Button from '../../ui/Button/Button'
 import styles from './ContactForm.module.scss'
-import { validateFormEmail, validateFormName } from '../../utils'
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({ name: '', email: '', note: '' } as { [key: string]: string })
@@ -69,3 +68,12 @@ const ContactForm = () => {
 }
 
 export default ContactForm
+
+const validateFormEmail = (email: string) => {
+    const regEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+    return regEx.test(email.toLowerCase())
+}
+
+const validateFormName = (name: string) => {
+    return name.length === 0 ? false : true
+}

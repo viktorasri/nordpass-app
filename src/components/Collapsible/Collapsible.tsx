@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, FunctionComponent } from 'react'
 import Icon from '../../ui/Icon/Icon'
 import Button from '../../ui/Button/Button'
+import useWindowsWidth from '../../data/hooks/useWindowWidth'
 import styles from './Collapsible.module.scss'
 
 interface IProps {
@@ -10,21 +11,10 @@ interface IProps {
 
 const Collapsible: FunctionComponent<IProps> = ({ children, title, expanded = false }) => {
     const [isExpanded, setIsExpanded] = useState(expanded)
-    const [windowWidth, setWindowWidth] = useState(0)
+    const windowWidth = useWindowsWidth()
     const [collapsibleHeight, setCollapsibleHeight] = useState(0)
     const elRef = useRef<HTMLDivElement>(null)
     const currentHeight = isExpanded ? collapsibleHeight : 0
-
-    useEffect(() => {
-        const updateWindowWidth = () => {
-            if (elRef.current) {
-                setWindowWidth(window.innerWidth)
-            }
-        }
-        window.addEventListener('resize', updateWindowWidth)
-
-        return () => window.removeEventListener('resize', updateWindowWidth)
-    }, [])
 
     useEffect(() => {
         if (elRef.current) {

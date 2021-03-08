@@ -5,27 +5,20 @@ import NavigationIcon from '../NavigationIcon/NavigationIcon'
 import NavigationMenu from '../NavigationMenu/NavigationMenu'
 import Button from '../../../ui/Button/Button'
 import Icon from '../../../ui/Icon/Icon'
+import useWindowsWidth from '../../../data/hooks/useWindowWidth'
 import styles from './NavigationBar.module.scss'
 
 const NavigationBar: FunctionComponent = () => {
     const [showNavigationMenu, setShowNavigationMenu] = useState(false)
-    const [windowWidth, setWindowWidth] = useState(0)
     const { pathname } = useLocation()
+    const windowWidth = useWindowsWidth()
 
     useEffect(() => {
-        //closes navigation menu at breakpoint where navbar links are visible
-        if (window) {
-            const updateWindowWidth = (): void => {
-                setWindowWidth(window.innerWidth)
-            }
-            window.addEventListener('resize', updateWindowWidth)
-
-            if (windowWidth >= 768) {
-                setShowNavigationMenu(false)
-            }
-            return () => window.removeEventListener('resize', updateWindowWidth)
+        //close navigation menu at breakpoint
+        if (windowWidth >= 768) {
+            setShowNavigationMenu(false)
         }
-    }, [windowWidth, setShowNavigationMenu])
+    }, [windowWidth])
 
     const toggleShowNavigation = () => {
         setShowNavigationMenu(!showNavigationMenu)
