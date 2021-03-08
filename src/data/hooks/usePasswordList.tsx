@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import leakedPasswordData from '../../data/leakedPasswordData'
+import { LeakedPassword } from '../../types'
 
 const usePasswordList = () => {
-    const [passwordList, setPasswordList] = useState([] as { value: string; count: string }[])
+    const [passwordList, setPasswordList] = useState([] as LeakedPassword[])
     useEffect(() => {
         const getPasswordData = async () => {
             try {

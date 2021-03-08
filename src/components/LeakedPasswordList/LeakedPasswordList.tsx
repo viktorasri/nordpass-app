@@ -5,11 +5,12 @@ import Select from '../../ui/Select/Select'
 import styles from './LeakedPasswordList.module.scss'
 import usePasswordList from '../../data/hooks/usePasswordList'
 import { getSortedPasswordListByCount, getSortedPasswordListByName } from '../../utils'
+import { LeakedPassword } from '../../types'
 
 const LeakedPasswordList = () => {
     const leakedPasswordList = usePasswordList()
     const [sortOption, setSortOption] = useState('count')
-    const [sortedList, setSortedList] = useState<{ value: string; count: string }[]>([])
+    const [sortedList, setSortedList] = useState<LeakedPassword[]>([])
     const [showAllList, setShowAllList] = useState(false)
     const [listLength, setListLength] = useState(10)
 
