@@ -16,7 +16,7 @@ const NavigationList: FunctionComponent<IProps> = ({ pathname }) => {
                         <Link
                             className={`${styles['NavigationList__link']} ${
                                 pathname === path && styles['NavigationList__link--active']
-                            } texSize--5 textWeight--semibold`}
+                            } textSize--5 textWeight--semibold`}
                             to={path}
                         >
                             {name}

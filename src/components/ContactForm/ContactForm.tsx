@@ -49,7 +49,7 @@ const ContactForm = () => {
                 )}
             </div>
             <div className="mb--6">
-                <TextArea name="note" placeholder="Note" rows={7} noResize={true} handleOnChange={handleOnChange} />
+                <TextArea name="note" placeholder="Note" rows={6} noResize={true} handleOnChange={handleOnChange} />
                 <p className="color--secondaryBlack textSize--6 mt--4">
                     This information will be used by NordPass to respond to your inquiry as provided in our{' '}
                     <Link className={styles['ContactForm__link']} to="/">

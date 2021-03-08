@@ -18,7 +18,7 @@ const NavigationMenu: FunctionComponent<IProps> = ({ pathname, showNavigationMen
         >
             {pages.map(({ name, path }) => {
                 return (
-                    <li key={name} className={`${styles['NavigationMenu__item']} mb--6`}>
+                    <li key={name} className="mb--6">
                         <Link
                             className={`${styles['NavigationMenu__link']} ${
                                 pathname === path && styles['NavigationMenu__link--active']

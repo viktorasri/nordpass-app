@@ -4,6 +4,7 @@
     position: fixed;
     height: $navigation-bar-height;
     width: 100%;
+    z-index: 1;
 }
 
 .NavigationBar__innerWrapper {

@@ -2,6 +2,10 @@
 @import '../../styles/mediaQueries.scss';
 
 .Hero {
+    background-image: linear-gradient($color-light, $color-white);
+}
+
+.Hero__innerWrapper {
     max-width: $max-page-width;
 
     @include lg {
