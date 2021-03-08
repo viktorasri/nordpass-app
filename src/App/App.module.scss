@@ -1,5 +1,11 @@
 @import '../styles/variables.scss';
 
+.App {
+    position: relative;
+    padding-bottom: $footer-height;
+    min-height: 100vh;
+}
+
 .App__content {
     padding-top: $navigation-bar-height;
 }

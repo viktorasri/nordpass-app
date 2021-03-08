@@ -81,6 +81,21 @@ $md-screen-width: 768px; // when changing update width in navigationBar useEffec
 $lg-screen-width: 1024px;
 
 // COMPONENT VARIABLES
+
+//NAVIGATION
+//navigation bar
+$navigation-bar-height: 3.5rem;
+//navigation link
+$navigation-link-color: $color-secondary-black;
+$navigation-link-active-color: $color-green;
+//navigation icon
+$navigation-icon-wrapper-size: 1.875rem;
+$navigation-icon-width: 1.5rem;
+$navigation-icon-thickness: 2px;
+
+//FOOTER
+$footer-height: 14rem;
+
 //HEADING
 $heading-size-1: $size-1;
 $heading-size-2: $size-2;
@@ -114,17 +129,6 @@ $button-padding-lg: $space-3 $space-6;
 
 //SELECT
 $select-width: 12rem;
-
-//NAVIGATION
-//navigation bar
-$navigation-bar-height: 3.5rem;
-//navigation link
-$navigation-link-color: $color-secondary-black;
-$navigation-link-active-color: $color-green;
-//navigation icon
-$navigation-icon-wrapper-size: 1.875rem;
-$navigation-icon-width: 1.5rem;
-$navigation-icon-thickness: 2px;
 
 //CONTACT FORM
 $contact-form-width: 650px;
