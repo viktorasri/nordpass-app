@@ -10,7 +10,7 @@ const FAQ = () => (
                     Frequently asked questions
                 </Heading>
             </div>
-            <Collapsible title="Why should you use a password manager for business?" expanded={true}>
+            <Collapsible title="Why should you use a password manager for business?">
                 <p className={`${styles['FAQ__text']} pb--4 mr--10`}>
                     Running a business comes with managing a lot of different devices and accounts. The easiest way to
                     keep track of their login credentials is to use a password manager.

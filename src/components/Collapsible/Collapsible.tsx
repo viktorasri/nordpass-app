@@ -6,11 +6,10 @@ import styles from './Collapsible.module.scss'
 
 interface IProps {
     title: string
-    expanded?: boolean
 }
 
-const Collapsible: FunctionComponent<IProps> = ({ children, title, expanded = false }) => {
-    const [isExpanded, setIsExpanded] = useState(expanded)
+const Collapsible: FunctionComponent<IProps> = ({ children, title }) => {
+    const [isExpanded, setIsExpanded] = useState(false)
     const windowWidth = useWindowsWidth()
     const [collapsibleHeight, setCollapsibleHeight] = useState(0)
     const elRef = useRef<HTMLDivElement>(null)
