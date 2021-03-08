@@ -1,0 +1,23 @@
+$colors: (
+    'white': $color-white,
+    'black': $color-black,
+    'secondaryBlack': $color-secondary-black,
+    'dark': $color-dark,
+    'green': $color-green,
+    'light': $color-light,
+    'lightest': $color-lightest,
+    'grey': $color-grey,
+    'lightGrey': $color-light-grey,
+    'darkGrey': $color-dark-grey,
+    'red': $color-red
+);
+
+@each $color, $value in $colors {
+    .color-#{$color} {
+        color: $value;
+    }
+
+    .bg-color-#{$color} {
+        background-color: $value;
+    }
+}

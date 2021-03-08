@@ -32,7 +32,7 @@ Since task description had no requirement for using JavaScript I've decided to u
 
 ### Structure and UI
 
-The chosen file structure is focused for easier maintainability and scalability, where I've nested every component with its style and seperated page, generic and ui components.
+The chosen file structure is focused for easier maintainability and scalability, where I've nested every component with its style and seperated page, generic and ui components. In addition to every component having its .scss nearby all generic .scss is kept in styles folder where variables, utilities and global styles are seperated.
 
 ### Scripts
 
