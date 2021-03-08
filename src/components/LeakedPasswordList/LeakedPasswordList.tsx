@@ -8,10 +8,10 @@ interface IProps {
 
 const LeakedPasswordList: FunctionComponent<IProps> = ({ sortedList, listLength }) => {
     return (
-        <ol className="ml-4">
+        <ol className="ml--4">
             {sortedList.slice(0, listLength).map(({ value, count }) => {
                 return (
-                    <li key={value} className={`${styles['LeakedPasswordList__item']} py-6 pl-6`}>
+                    <li key={value} className={`${styles['LeakedPasswordList__item']} py--6 pl--6`}>
                         <div className={styles['LeakedPasswordList__itemText']}>
                             <span className={styles['LeakedPasswordList__itemTitle']}>{value}</span>
                             <span>{count}</span>

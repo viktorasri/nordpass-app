@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, ChangeEventHandler } from 'react'
 import LeakedPasswordList from '../LeakedPasswordList/LeakedPasswordList'
 import Heading from '../../ui/Heading/Heading'
 import Button from '../../ui/Button/Button'
+import Select from '../../ui/Select/Select'
 import styles from './LeakedPasswords.module.scss'
 import { getSortedPasswordListByCount, getSortedPasswordListByName } from '../../helpers'
 
@@ -44,28 +45,28 @@ const LeakedPasswords = () => {
         }
     }
 
+    const handleSelect: ChangeEventHandler<HTMLSelectElement> = (e) => {
+        setSortOption(e.target.value)
+    }
+
     return (
-        <section className={`${styles['LeakedPasswords']} text-centered mx-auto p-4 lg-pb-8`}>
-            <div className="mb-8">
+        <section className={`${styles['LeakedPasswords']} text--centered mx--auto p--4 lg__pb--8`}>
+            <div className="mb--8">
                 <Heading variant="h3" size="2">
                     Top leaked passwords
                 </Heading>
             </div>
-            <div className={`${styles['LeakedPasswords__listTitle']} pb-6`}>
+            <div className={`${styles['LeakedPasswords__listTitle']} pb--6`}>
                 <Heading variant="h6" size="3">
                     Passwords
                 </Heading>
-
-                <select
-                    className={`${styles['LeakedPasswords__select']} color-dark-grey ml-3 py-1 pl-2`}
-                    onChange={(e) => setSortOption(e.target.value)}
-                >
+                <Select handleOnChange={handleSelect}>
                     <option value="count">Count</option>
                     <option value="abc">ABC</option>
-                </select>
+                </Select>
             </div>
             <LeakedPasswordList sortedList={sortedList} listLength={listLength} />
-            <div className="mt-7 lg-pb-7">
+            <div className="mt--7 lg__pb--7">
                 <Button variant="button" size="2" color="primary" handleOnClick={toggleListLength}>
                     {!showAllList ? `Show all (50)` : `Show less (10)`}
                 </Button>

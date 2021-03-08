@@ -14,15 +14,15 @@ const NavigationMenu: FunctionComponent<IProps> = ({ pathname, showNavigationMen
         <ul
             className={`${styles['NavigationMenu']} ${
                 showNavigationMenu && styles['NavigationMenu--expanded']
-            } bg-color-light pl-8 pt-6`}
+            } color__bg--light pl--8 pt--6`}
         >
             {pages.map(({ name, path }) => {
                 return (
-                    <li key={name} className={`${styles['NavigationMenu__item']} mb-6`}>
+                    <li key={name} className={`${styles['NavigationMenu__item']} mb--6`}>
                         <Link
                             className={`${styles['NavigationMenu__link']} ${
                                 pathname === path && styles['NavigationMenu__link--active']
-                            } textWeight-semibold`}
+                            } textWeight--semibold`}
                             to={path}
                             onClick={() => setShowNavigationMenu(false)}
                         >

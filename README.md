@@ -24,7 +24,7 @@ One thing I've noticed is that CRA does not support path aliases straight out of
 
 I've used SUIT CSS methodology before for my personal project but since the task suggested using BEM I thought to try it out this time. In addition to SASS I've also decided to use CSS modules since they come with CRA and one of the benefits I enjoy most is the file structure where each component and scss file sits neatly together.
 
-After using BEM methodology on the task for some time I felt that occasionally it was hard to come up with meaningful semantic class names, especially if all I had to do was give some spacing or alignment. So I decided to make utility classes for spacing, alignment, some typography and refactored the code.
+After using BEM methodology on the task for some time I felt that occasionally it was hard to come up with meaningful semantic class names, especially if all I had to do was give some spacing or alignment. So I decided to make utility classes for spacing, alignment, some typography and refactored the code. Later to keep with the BEM flow I've decided to rename utility classes using same methodology, but kept them classes lowercase for easy seperation, between 'Component' class and 'utility' class.
 
 From all the different spacings in Figma template it was hard to come up with a spacing system that would fit all different values so I've decided to leave odd spacings like 5px, 7px, 9px, 15px out.
 

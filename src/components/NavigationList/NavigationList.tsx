@@ -12,11 +12,11 @@ const NavigationList: FunctionComponent<IProps> = ({ pathname }) => {
         <ul className={styles['NavigationList']}>
             {pages.map(({ name, path }) => {
                 return (
-                    <li key={name} className={`${styles['NavigationList__item']} mr-6`}>
+                    <li key={name} className={`${styles['NavigationList__item']} mr--6`}>
                         <Link
                             className={`${styles['NavigationList__link']} ${
                                 pathname === path && styles['NavigationList__link--active']
-                            } size-5 textWeight-semibold`}
+                            } size--5 textWeight--semibold`}
                             to={path}
                         >
                             {name}

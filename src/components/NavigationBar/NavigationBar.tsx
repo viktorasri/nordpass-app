@@ -32,8 +32,8 @@ const NavigationBar: FunctionComponent = () => {
     }
 
     return (
-        <nav className={`${styles['NavigationBar']} bg-color-light`}>
-            <div className={`${styles['NavigationBar__innerWrapper']} px-4 mx-auto`}>
+        <nav className={`${styles['NavigationBar']} color__bg--light`}>
+            <div className={`${styles['NavigationBar__innerWrapper']} px--4 mx--auto`}>
                 <Link to="/" onClick={() => setShowNavigationMenu(false)}>
                     <Icon variant="logo" />
                 </Link>

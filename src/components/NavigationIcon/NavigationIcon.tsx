@@ -11,7 +11,7 @@ const NavigationIcon: FunctionComponent<IProps> = ({ showNavigationMenu, toggleS
         <button
             className={`${styles['NavigationIcon']} ${
                 showNavigationMenu && styles['NavigationIcon--active']
-            } ml-3 md-ml-6`}
+            } ml--3 md__ml--6`}
             onClick={toggleShowNavigation}
         >
             <span className={styles['NavigationIcon__decoration']}></span>

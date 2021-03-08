@@ -9,13 +9,13 @@ $sizes: (
 );
 
 @each $size, $value in $sizes {
-    .size-#{$size} {
+    .size--#{$size} {
         font-size: $value;
     }
 }
 
 @each $size, $value in $sizes {
-    .md-size-#{$size} {
+    .md__size--#{$size} {
         @include md {
             font-size: $value;
         }
@@ -23,7 +23,7 @@ $sizes: (
 }
 
 @each $size, $value in $sizes {
-    .lg-size-#{$size} {
+    .lg__size--#{$size} {
         @include lg {
             font-size: $value;
         }
@@ -38,13 +38,13 @@ $alignments: (
 );
 
 @each $alignment, $text-align in $alignments {
-    .text-#{$alignment} {
+    .text--#{$alignment} {
         text-align: #{$text-align};
     }
 }
 
 @each $alignment, $text-align in $alignments {
-    .md-text-#{$alignment} {
+    .md__text--#{$alignment} {
         @include md {
             text-align: #{$text-align};
         }
@@ -52,21 +52,21 @@ $alignments: (
 }
 
 @each $alignment, $text-align in $alignments {
-    .lg-text-#{$alignment} {
+    .lg__text--#{$alignment} {
         @include lg {
             text-align: #{$text-align};
         }
     }
 }
 
-.textWeight-normal {
+.textWeight--normal {
     font-weight: $font-weight-normal;
 }
 
-.textWeight-semibold {
+.textWeight--semibold {
     font-weight: $font-weight-semibold;
 }
 
-.textWeight-bold {
+.textWeight--bold {
     font-weight: $font-weight-bold;
 }

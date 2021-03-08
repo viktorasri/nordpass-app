@@ -18,3 +18,12 @@ export const getSortedPasswordListByName = (list: { value: string; count: string
     })
     return sortedList
 }
+
+export const validateFormEmail = (email: string) => {
+    const regEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+    return regEx.test(email.toLowerCase())
+}
+
+export const validateFormName = (name: string) => {
+    return name.length === 0 ? false : true
+}
