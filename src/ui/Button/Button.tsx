@@ -25,6 +25,7 @@ const Button: FunctionComponent<IProps> = ({
             <Link
                 className={`${styles['Button']} ${styles[`Button--size-${size}`]} ${styles[`Button--color-${color}`]}`}
                 to={path}
+                onClick={handleOnClick}
             >
                 {children}
             </Link>

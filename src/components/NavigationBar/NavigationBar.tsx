@@ -2,6 +2,7 @@ import { useState, useEffect, FunctionComponent } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import NavigationList from '../NavigationList/NavigationList'
 import NavigationIcon from '../NavigationIcon/NavigationIcon'
+import NavigationMenu from '../NavigationMenu/NavigationMenu'
 import Button from '../../ui/Button/Button'
 import Icon from '../../ui/Icon/Icon'
 import styles from './NavigationBar.module.scss'
@@ -11,8 +12,8 @@ const NavigationBar: FunctionComponent = () => {
     const [windowWidth, setWindowWidth] = useState(0)
     const { pathname } = useLocation()
 
-    //closes navigation menu when window size reaches point where navigation bar links are visible
     useEffect(() => {
+        //closes navigation menu at breakpoint where navbar links are visible
         if (window) {
             const updateWindowWidth = (): void => {
                 setWindowWidth(window.innerWidth)
@@ -33,12 +34,18 @@ const NavigationBar: FunctionComponent = () => {
     return (
         <nav className={`${styles['NavigationBar']} bg-color-light`}>
             <div className={`${styles['NavigationBar__innerWrapper']} px-4 mx-auto`}>
-                <Link to="/">
+                <Link to="/" onClick={() => setShowNavigationMenu(false)}>
                     <Icon variant="logo" />
                 </Link>
                 <div className={styles['NavigationBar__listContainer']}>
                     <NavigationList pathname={pathname} />
-                    <Button variant="link" path="/vault" size="3" color="primary">
+                    <Button
+                        variant="link"
+                        path="/vault"
+                        size="3"
+                        color="primary"
+                        handleOnClick={() => setShowNavigationMenu(false)}
+                    >
                         Open Vault
                     </Button>
                     <NavigationIcon
@@ -47,6 +54,11 @@ const NavigationBar: FunctionComponent = () => {
                     />
                 </div>
             </div>
+            <NavigationMenu
+                pathname={pathname}
+                showNavigationMenu={showNavigationMenu}
+                setShowNavigationMenu={setShowNavigationMenu}
+            />
         </nav>
     )
 }

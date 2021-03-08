@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.NavigationMenu {
+    list-style: none;
+    height: 0%;
+    opacity: 0;
+}
+
+.NavigationMenu--expanded {
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.NavigationMenu__link {
+    color: $navigation-link-color;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: $navigation-link-active-color;
+    }
+}
+
+.NavigationMenu__link--active {
+    color: $navigation-link-active-color;
+}
