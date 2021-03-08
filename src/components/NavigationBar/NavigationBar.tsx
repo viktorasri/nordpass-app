@@ -11,6 +11,7 @@ const NavigationBar: FunctionComponent = () => {
     const [windowWidth, setWindowWidth] = useState(0)
     const { pathname } = useLocation()
 
+    //closes navigation menu when window size reaches point where navigation bar links are visible
     useEffect(() => {
         if (window) {
             const updateWindowWidth = (): void => {

@@ -1,19 +1,20 @@
 ### Tech stack
 
-HTML
-SCSS
-BEM
-CSS Modules
-TypeScript
-ReactJS
-React Router
-Create React App
+HTML\
+SCSS\
+BEM\
+CSS Modules\
+TypeScript\
+ReactJS\
+React Router\
+Create React\
+App
 
 ### Browser support
 
-All broswers with at least 0.2% global market share
-Exclude browsers without official support in last 24 moths
-Eclude Opera Mini
+All broswers with at least 0.2% global market share\
+Exclude browsers without official support in last 24 moths\
+Eclude Opera Mini\
 Include IE11
 
 ### Description
@@ -28,7 +29,7 @@ After using BEM methodology on the task for some time I felt that occasionally i
 
 From all the different spacings in Figma template it was hard to come up with a spacing system that would fit all different values so I've decided to leave odd spacings like 5px, 7px, 9px, 15px out.
 
-Since task description had no requirement for using JavaScript I've decided to use TypeScript since it helps avoiding most runtime errors regaridng types.
+Since task description had no requirement for using JavaScript I've decided to use TypeScript since it helps avoiding most runtime errors regarding types.
 
 ### Structure and UI
 
