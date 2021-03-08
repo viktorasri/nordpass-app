@@ -7,8 +7,7 @@ CSS Modules\
 TypeScript\
 ReactJS\
 React Router\
-Create React\
-App
+Create React App
 
 ### Browser support
 
